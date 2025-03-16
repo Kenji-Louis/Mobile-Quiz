@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=2 format=3 uid="uid://bta72sicx0a0a"]
+
+[ext_resource type="Script" uid="uid://cpau4nwfk6u66" path="res://scripts/resources/question.gd" id="1_ggtw6"]
+
+[resource]
+script = ExtResource("1_ggtw6")
+question_info = "Which word is the past tense of \"run\"?"
+type = 0
+options = Array[String](["Runs", "Running", "Ran", "Runned"])
+correct = "Ran"
+metadata/_custom_type_script = "uid://cpau4nwfk6u66"

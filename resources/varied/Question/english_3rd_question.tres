@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=2 format=3 uid="uid://2mab4rulekdr"]
+
+[ext_resource type="Script" uid="uid://cpau4nwfk6u66" path="res://scripts/resources/question.gd" id="1_g552j"]
+
+[resource]
+script = ExtResource("1_g552j")
+question_info = "Choose the correct synonym for \"happy.\""
+type = 0
+options = Array[String](["Joyful", "Angry", "Sad", "Boring"])
+correct = "Joyful"
+metadata/_custom_type_script = "uid://cpau4nwfk6u66"

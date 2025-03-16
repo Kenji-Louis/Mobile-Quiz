@@ -1,0 +1,147 @@
+[gd_scene load_steps=5 format=3 uid="uid://brbedictaumy2"]
+
+[ext_resource type="Script" uid="uid://dfc5vkg4v5rvw" path="res://scripts/controllers/game_controller.gd" id="1_6xkig"]
+[ext_resource type="Resource" uid="uid://bi7qtj33rkr3w" path="res://resources/varied/theme/theme_varied.tres" id="2_y7g0d"]
+[ext_resource type="AudioStream" uid="uid://bpm4mhpd3qwrb" path="res://assets/sound/correct.mp3" id="3_2hegx"]
+[ext_resource type="AudioStream" uid="uid://blcmq3dlk1fqy" path="res://assets/sound/answer-wrong.mp3" id="4_es4bo"]
+
+[node name="Main" type="CanvasLayer"]
+script = ExtResource("1_6xkig")
+quiz = ExtResource("2_y7g0d")
+color_right = Color(0, 0.745098, 0, 1)
+color_wrong = Color(0.803922, 0.0235294, 0.0235294, 1)
+
+[node name="Content" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="QuestionInfo" type="VBoxContainer" parent="Content"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -269.0
+offset_right = 269.0
+offset_bottom = 437.0
+grow_horizontal = 2
+
+[node name="QuestionText" type="Label" parent="Content/QuestionInfo"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_font_sizes/font_size = 25
+text = "QUESTION"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="ImageHolder" type="Panel" parent="Content/QuestionInfo"]
+custom_minimum_size = Vector2(0, 350)
+layout_mode = 2
+
+[node name="QuestionImage" type="TextureRect" parent="Content/QuestionInfo/ImageHolder"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="QuestionHolder" type="VBoxContainer" parent="Content"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -264.0
+offset_top = -553.0
+offset_right = 263.0
+offset_bottom = -18.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 20
+
+[node name="Button" type="Button" parent="Content/QuestionHolder"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 20
+
+[node name="Button2" type="Button" parent="Content/QuestionHolder"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 20
+
+[node name="Button3" type="Button" parent="Content/QuestionHolder"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 20
+
+[node name="Button4" type="Button" parent="Content/QuestionHolder"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 20
+
+[node name="GameOver" type="ColorRect" parent="Content"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0.741176, 0.486275, 1)
+
+[node name="Title" type="Label" parent="Content/GameOver"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -184.0
+offset_top = 201.0
+offset_right = 191.0
+offset_bottom = 297.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 70
+text = "Total Score"
+
+[node name="Score" type="Label" parent="Content/GameOver"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -38.5
+offset_top = -133.5
+offset_right = 38.5
+offset_bottom = -64.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 70
+text = "0/0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="Content/GameOver"]
+layout_mode = 0
+offset_left = 119.0
+offset_top = 852.0
+offset_right = 448.0
+offset_bottom = 917.0
+theme_override_font_sizes/font_size = 30
+text = "Play Again"
+
+[node name="AudioCorrect" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_2hegx")
+
+[node name="AudioIncorrect" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_es4bo")
+
+[connection signal="pressed" from="Content/GameOver/Button" to="." method="_on_button_pressed"]

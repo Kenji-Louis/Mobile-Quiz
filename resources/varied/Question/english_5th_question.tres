@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=2 format=3 uid="uid://cy02kxg4pybh6"]
+
+[ext_resource type="Script" uid="uid://cpau4nwfk6u66" path="res://scripts/resources/question.gd" id="1_58vg5"]
+
+[resource]
+script = ExtResource("1_58vg5")
+question_info = "Identify the adjective word"
+type = 0
+options = Array[String](["Play", "Slept", "Small", "Chair"])
+correct = "Small"
+metadata/_custom_type_script = "uid://cpau4nwfk6u66"

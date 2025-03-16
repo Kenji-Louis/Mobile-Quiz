@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=2 format=3 uid="uid://dhvip0cdpcabi"]
+
+[ext_resource type="Script" uid="uid://cpau4nwfk6u66" path="res://scripts/resources/question.gd" id="1_qw7a7"]
+
+[resource]
+script = ExtResource("1_qw7a7")
+question_info = "Choose the correct plural form of \"child.\""
+type = 0
+options = Array[String](["Childs", "Childes", "Children", "Childrens"])
+correct = "Children"
+metadata/_custom_type_script = "uid://cpau4nwfk6u66"

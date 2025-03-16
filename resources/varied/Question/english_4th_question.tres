@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=2 format=3 uid="uid://d27788xh6odi2"]
+
+[ext_resource type="Script" uid="uid://cpau4nwfk6u66" path="res://scripts/resources/question.gd" id="1_bjqlu"]
+
+[resource]
+script = ExtResource("1_bjqlu")
+question_info = "I saw a beautiful _____ flying in the garden."
+type = 0
+options = Array[String](["Caterpillar", "Ant", "Lizard", "Butterfly"])
+correct = "Butterfly"
+metadata/_custom_type_script = "uid://cpau4nwfk6u66"
